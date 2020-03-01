@@ -1,5 +1,7 @@
 # speeedy
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/04d432e424ce4d6aabf9c6237d9d304c)](https://app.codacy.com/manual/faoztas/speeedy?utm_source=github.com&utm_medium=referral&utm_content=faoztas/speeedy&utm_campaign=Badge_Grade_Dashboard)
+
 Speeedy is a SpeedTest Telegram bot. Speedtest only runs on the machine it is installed on. Speedtest can also be run routinely with Job.
 
 I developed this bot because I was curious about the performance of the my ISP.
