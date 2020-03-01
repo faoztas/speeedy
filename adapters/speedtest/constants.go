@@ -1,7 +1,6 @@
 package speedtest
 
 const (
-	Path                = "ookla-speedtest-1.0.0-macosx/speedtest"
 	Help                = "-h"
 	Verbosity           = "-v"
 	Version             = "-V"

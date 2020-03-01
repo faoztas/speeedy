@@ -1,5 +1,7 @@
 /ookla-speedtest-1.0.0-macosx/
 /config.toml
-/bolt.db
 .idea
 /.idea
+/speeedy.db
+/go.mod
+/go.sum

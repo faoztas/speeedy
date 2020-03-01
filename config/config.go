@@ -8,16 +8,21 @@ import (
 )
 
 type env struct {
+	SpeedTest struct {
+		Path string
+		Flag bool
+	}
 	Telegram struct {
 		Token string
 	}
-	Logging logging
-	DBFile  string
-}
-
-type logging struct {
-	Level  string
-	Format string
+	Logging struct {
+		Level  string
+		Format string
+	}
+	DB struct {
+		DBFile string
+		Debug  bool
+	}
 }
 
 var (
@@ -36,8 +41,12 @@ func Init(path string) {
 		panic(fmt.Errorf("config file read error : %e", err))
 	}
 
-	if Env.DBFile == "" {
-		Env.DBFile = "ledger.db"
+	if Env.DB.DBFile == "" {
+		Env.DB.DBFile = "speeed.db"
+	}
+
+	if Env.SpeedTest.Path == "" {
+		panic("SpeedTest-Cli path not found.")
 	}
 
 }

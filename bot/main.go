@@ -13,7 +13,6 @@ func Start(token string) {
 		Token:  token,
 		Poller: &telebot.LongPoller{Timeout: 10 * time.Second},
 	})
-
 	if err != nil {
 		log.Fatal(err)
 		return
@@ -21,11 +20,13 @@ func Start(token string) {
 
 	h := Handler{Bot: b}
 	b.Handle("/start", h.Start)
-	b.Handle("/list", h.ServerLists)
+	b.Handle("/servers", h.Servers)
 	b.Handle("/test", h.Test)
 	b.Handle("/help", h.Help)
-	// b.Handle(telebot.OnText, h.Text)
-
+	b.Handle("/last", h.Last)
+	b.Handle("/best", h.Best)
+	b.Handle("/worst", h.Worst)
+	b.Handle(telebot.OnText, h.Text)
 
 	logrus.Info("Telegram bot starting")
 	b.Start()

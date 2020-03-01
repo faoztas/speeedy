@@ -3,9 +3,10 @@ package main
 import (
 	"flag"
 
-	"speedy/bot"
-	"speedy/config"
-	"speedy/db"
+	"github.com/speeedy/bot"
+	"github.com/speeedy/config"
+	"github.com/speeedy/db"
+	"github.com/speeedy/job"
 )
 
 func main() {
@@ -16,8 +17,12 @@ func main() {
 
 	config.Init(configFilePath)
 	config.InitLogging()
+
 	db.Init()
+	db.Migrate(db.DB)
 	defer db.Close()
+
+	go job.Jobs()
 
 	bot.Start(config.Env.Telegram.Token)
 }

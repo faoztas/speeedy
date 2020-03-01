@@ -1,0 +1,14 @@
+[SpeedTest]
+Path = "$SPEEDTEST_PATH"
+Flag = "$SPEEDTEST_FLAG"
+
+[DB]
+DBFile = "$DB_NAME"
+Debug = "$DB_DEBUG_FLAG"
+
+[Telegram]
+Token = "$API_TOKEN"
+
+[Logging]
+Level = "$LOG_LEVEL"
+Format = "$LOG_FORMAT"
