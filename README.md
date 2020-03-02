@@ -52,4 +52,4 @@ If you want to learn Past test results please write /last.
 /best             # best result
 /worst            # worst result
 ```
-<p style="text-align:center;"><img src="https://i.imgur.com/SLfo6sN.png" width="300" /></p>
+<p align="center"><img src="https://i.imgur.com/SLfo6sN.png" width="300"/></p>
