@@ -9,11 +9,13 @@ I developed this bot because I was curious about the performance of the my ISP.
 * Go 1.13+
 * Vgo (Go Module)
 * Telegram
+* SpeedTest Cli
 
 ### Installing speeedy and Run
 
 * Create a telegram bot with BotFather and get token of created bot.
-* Set required environment variables
+* Download [SpeedTest CLI](https://www.speedtest.net/apps/cli) and moves to the project directory.
+* Set required environment variables and path
 
 ```bash
 $ cd $GOPATH/src
@@ -27,3 +29,27 @@ $ go mod tidy               # This command allows you to fetch all the dependenc
 $ go build -o speeedy       # Or $ go run .
 $ ./speeedy
 ```
+
+### How to use
+
+If you want to Speed Test please write /test.
+
+```bash
+/test             # default basic test
+/test details     # speed test with extras argument
+/test image       # send image with speed test
+/test server 1234 # speed test with specific server
+```
+
+If you want to learn Server List please write /servers.
+```bash
+/servers          # nearly 10 speedtest server
+```
+If you want to learn Past test results please write /last.
+```bash
+/last             # last result
+/last 5           # last 5 results
+/best             # best result
+/worst            # worst result
+```
+<p style="text-align:center;"><img src="https://i.imgur.com/SLfo6sN.png" width="300" /></p>
